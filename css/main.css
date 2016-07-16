@@ -1,0 +1,227 @@
+/*
+ *	Site:;
+ *	Author: ;
+ *	Date: ;
+ *	Comments: ;
+ */
+ /* * * * * * * * * * * * * * *
+* SASS GLOBAL VARIABLES
+* * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * *
+*   GENERAL STYLES
+* * * * * * * * * * * * * * */
+h1 {
+  padding: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1); }
+
+h2, h3, h4 {
+  padding: 15px;
+  font-family: "Quicksand", sans-serif;
+  /*border: 1px solid red;*/ }
+
+h2 {
+  /*starting opacity and margin for animation*/
+  opacity: 0.0;
+  margin-left: -300px;
+  font-weight: bold; }
+
+h3 {
+  font-weight: bolder; }
+
+p, a {
+  /*starting opacity for animations*/
+  opacity: 0.0;
+  font-size: 12px;
+  font-family: "Quicksand", sans-serif;
+  padding: 0 20px 0 20px; }
+  @media (max-width: 768px) {
+    p, a {
+      font-size: 16px;
+      padding: 0 30px 0 30px; } }
+
+a:hover {
+  text-decoration: none; }
+
+.container-full {
+  margin: 0px;
+  width: 100%; }
+
+ /* * * * * * * * * * * * * * *
+* DIV STRUCTURE
+* * * * * * * * * * * * * * */
+div {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: none;
+  /* END > intro*/
+  /*ABOUT SECTION*/
+  /* END > about*/
+  /*PROJECTS SECTION*/
+  /* END > projects*/
+  /*MOAI MUSIC SECTION ABOUT*/
+  /* END > moai*/
+  /*SOUNDCLOUD SONG IFRAME*/
+  /* END > song*/
+  /*CONTACT DETAILS AND LINKS*/
+  /* END > CONTACT DETAILS AND LINKS*/ }
+  div .content {
+    padding: 0px; }
+  div .content-info {
+    width: 100%;
+    padding: 0px;
+    margin: 0px; }
+  div #intro {
+    color: RGB(39, 40, 41);
+    word-wrap: break-word;
+    background-image: url("../img/mandala.jpg");
+    background-repeat: none;
+    background-repeat: no-repeat;
+    background-position: center; }
+    div #intro h1 {
+      position: absolute;
+      top: 20px; }
+    div #intro h2 {
+      position: absolute;
+      top: 120px; }
+  div #about {
+    color: #f2f2f2;
+    background-color: #E37222;
+    display: block; }
+  div #projects {
+    color: #EEAA7B;
+    background-color: #07889B;
+    display: block; }
+    div #projects .content-info {
+      display: block; }
+    div #projects ul {
+      margin: 0px;
+      padding: 0px;
+      /*        border: 1px solid red;*/ }
+    div #projects li {
+      padding: 0 0 10px 0;
+      list-style: none;
+      color: #EEAA7B;
+      font-family: "Quicksand", sans-serif;
+      font-size: 15px;
+      margin-left: 20px;
+      transition: letter-spacing 0.5s; }
+      div #projects li > a {
+        color: #EEAA7B; }
+      @media (max-width: 768px) {
+        div #projects li {
+          margin-bottom: 30px; } }
+      @media (max-width: 992px) {
+        div #projects li {
+          margin-bottom: 0 0 5px 0; } }
+    div #projects li:hover {
+      text-decoration: none;
+      letter-spacing: 2px; }
+  div #moai {
+    color: #E37222;
+    background-color: #66B9BF;
+    display: block; }
+    div #moai h3 {
+      margin-bottom: 0px;
+      display: block; }
+  div #moai-tag1, div #moai-tag2 {
+    /*starting points for animation*/
+    opacity: 0.0;
+    margin: 0px;
+    display: block;
+    float: left; }
+  div #scLink {
+    text-decoration: none;
+    color: #E37222;
+    font-size: 25px;
+    padding: 15px;
+    font-family: "Quicksand", sans-serif;
+    padding: 0 5px 0 5px;
+    background-color: rgba(0, 0, 0, 0.1); }
+  div #contact {
+    color: RGB(39, 40, 41);
+    background-color: #EEAA7B;
+    display: block; }
+    @media (max-width: 768px) {
+      div #contact {
+        height: 100px; } }
+    div #contact #emailLink {
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      color: #07889B;
+      text-decoration: none;
+      transition: color 0.5s;
+      /*starting opacity and margin for animations*/
+      opacity: 0.00;
+      margin-left: -300;
+      font-weight: bold;
+      font-size: 20px; }
+      div #contact #emailLink :hover {
+        color: #66B9BF; }
+    div #contact #contactIcons {
+      width: 100%;
+      height: 100px;
+      /*padding: $pad $pad/2 $pad $pad/2;*/
+      display: inline-flex;
+      justify-content: center; }
+      div #contact #contactIcons a {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0px;
+        color: #f4c7a8;
+        transition: color 0.5s; }
+      div #contact #contactIcons a:hover {
+        color: #07889B; }
+      @media (max-width: 768px) {
+        div #contact #contactIcons {
+          display: block;
+          width: 100%;
+          text-align: center; }
+          div #contact #contactIcons a {
+            display: block;
+            /*width: 100%;*/
+            font-size: 150%;
+            padding-bottom: 40px; } }
+
+ /* * * * * * * * * * * * * * *
+* CUSTOM MEDIA QUERIES
+* * * * * * * * * * * * * * */
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .content {
+    width: 100%; }
+
+  /*      #emailLink {
+          margin-top: 100px;
+        }*/
+  .projectLink {
+    margin-bottom: 20px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .content {
+    width: 100%; }
+
+  /*      #emailLink {
+          margin-top: 100px;
+        }      */
+  .projectLink {
+    margin-bottom: 20px; } }
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .content {
+    width: 50%; }
+
+  .projectLink {
+    margin-bottom: 20px; } }
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .content {
+    width: 33.3%; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .content {
+    width: 33.3%; } }
+
+/*# sourceMappingURL=main.css.map */

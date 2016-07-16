@@ -1,0 +1,308 @@
+/*
+ *	Site:;
+ *	Author: ;
+ *	Date: ;
+ *	Comments: ;
+ */
+
+   /* * * * * * * * * * * * * * *
+  * SASS GLOBAL VARIABLES
+  * * * * * * * * * * * * * * */ 
+$col1:    #E37222;
+$col1-social: #f4c7a8;
+$col2:    #07889B;
+$col3:    #66B9BF;
+$col4:    #EEAA7B;
+$black:   RGB(39,40,41);
+$white:   #f2f2f2;
+$pad:     10px;
+$font1:   'Quicksand', sans-serif;
+$font2:   'Monoton', cursive;
+
+
+
+/* * * * * * * * * * * * * * *
+*   GENERAL STYLES
+* * * * * * * * * * * * * * */
+  h1 {
+    padding: $pad;
+    font-family: $font1;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.1);
+  }
+  h2, h3, h4 {    
+    padding: $pad+5;
+    font-family: $font1;    
+    /*border: 1px solid red;*/
+  }
+  h2 {
+    /*starting opacity and margin for animation*/
+    opacity: 0.0;
+    margin-left: -300px;
+    font-weight: bold;
+  }
+  h3 {
+    font-weight: bolder;
+  }
+  p, a {  
+    /*starting opacity for animations*/
+    opacity: 0.0;
+    font-size: 12px;  
+
+    font-family: $font1;
+    padding: 0 $pad+10 0 $pad+10;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 0 $pad+20 0 $pad+20;
+    }
+  }      
+
+  a:hover {
+      text-decoration: none;
+    }
+  .container-full {
+    margin: 0px;
+    width: 100%;
+  }
+
+ /* * * * * * * * * * * * * * *
+* DIV STRUCTURE
+* * * * * * * * * * * * * * */
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: none;
+    .content{
+      padding: 0px;
+    }
+    .content-info {
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    #intro{ 
+      color: $black;
+      word-wrap:break-word;
+      background-image: url('../img/mandala.jpg');
+      background-repeat: none;
+      background-repeat: no-repeat;
+      background-position: center; 
+      h1 {
+        position: absolute; 
+        top: 20px; 
+      }
+      h2 {
+        position: absolute; 
+        top: 120px; 
+      }
+    }
+    /* END > intro*/
+
+
+
+    /*ABOUT SECTION*/
+    #about{
+      color: $white;
+      background-color: $col1;
+      display: block;
+    }
+    /* END > about*/
+
+
+
+    /*PROJECTS SECTION*/
+    #projects{
+      color: $col4;
+      background-color: $col2;
+      display: block;
+      .content-info {
+        display: block;
+      }
+
+      ul{
+        margin: 0px;
+        padding: 0px;
+/*        border: 1px solid red;*/
+      }
+      li {
+        padding: 0 0 $pad 0;
+        list-style: none;
+        color: $col4;
+        font-family: $font1;
+        font-size: 15px;
+        margin-left: $pad*2;
+        transition: letter-spacing 0.5s;
+        > a {
+          color: $col4;
+        }
+
+        @media(max-width: 768px){
+          margin-bottom: $pad*3;
+        }
+
+        @media(max-width: 992px){
+          margin-bottom: 0 0 $pad*0.5 0;
+        }
+      }        
+      li:hover {
+          text-decoration: none;
+          letter-spacing: 2px;
+      }
+    }
+    /* END > projects*/
+
+
+
+    /*MOAI MUSIC SECTION ABOUT*/
+    #moai{
+      color: $col1;
+      background-color: $col3;
+      display: block;
+      h3 {
+        margin-bottom: 0px;
+        display: block;
+      }
+    }
+    #moai-tag1, #moai-tag2 {
+      /*starting points for animation*/
+      opacity: 0.0;
+      margin: 0px;
+      display: block;
+      float: left;
+    }
+    #scLink {
+      text-decoration: none;
+      color: $col1;
+      font-size: 25px;
+      padding: $pad+5;
+      font-family: $font1;
+      padding: 0 5px 0 5px;
+      background-color: rgba(0,0,0,0.1);
+    }
+    /* END > moai*/
+
+
+
+    /*SOUNDCLOUD SONG IFRAME*/
+    #song{
+    }
+    /* END > song*/
+
+
+
+    /*CONTACT DETAILS AND LINKS*/
+    #contact{
+      color: $black;
+      background-color: $col4;
+      display: block;
+
+      @media (max-width: 768px){
+        height: 100px;
+      }
+
+      #emailLink {
+        width:100%;
+        height: 100px;
+        text-align: center;
+        color: $col2;
+        text-decoration: none;
+        transition: color 0.5s;        
+        /*starting opacity and margin for animations*/
+        opacity: 0.00;
+        margin-left: -300;
+        font-weight: bold;
+        font-size: 20px;
+        :hover {
+          color: $col3;
+        }
+      }
+    
+      #contactIcons {
+        width: 100%;
+        height: 100px;
+        /*padding: $pad $pad/2 $pad $pad/2;*/
+        display: inline-flex;
+        justify-content: center;
+
+        a {
+          margin-left: $pad;
+          margin-right: $pad; 
+          padding: 0px;
+          color: $col1-social;
+          transition: color 0.5s;      
+        }
+
+        a:hover {
+          color: $col2;
+        }
+
+        @media(max-width: 768px){
+          display: block;
+          width: 100%;
+          text-align: center;
+          a {
+            display: block;
+            /*width: 100%;*/
+            font-size: 150%;
+            padding-bottom: $pad*4;
+          }
+        }
+      }
+    }
+    /* END > CONTACT DETAILS AND LINKS*/
+    
+  }
+
+
+
+ /* * * * * * * * * * * * * * *
+* CUSTOM MEDIA QUERIES
+* * * * * * * * * * * * * * */
+
+    /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+      .content {
+        width: 100%;
+      }      
+/*      #emailLink {
+        margin-top: 100px;
+      }*/
+      .projectLink {
+        margin-bottom: $pad*2;
+      }
+  }
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (min-width : 480px) {
+      .content {
+        width: 100%;
+      }      
+/*      #emailLink {
+        margin-top: 100px;
+      }      */
+      .projectLink {
+        margin-bottom: $pad*2;
+      }
+  }
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+      .content {
+        width: 50%;
+      }
+      .projectLink {
+        margin-bottom: $pad*2;
+      }
+  }
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+      .content {
+        width: 33.3%;
+      }
+  }
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+      .content {
+        width: 33.3%;
+      }
+  }
